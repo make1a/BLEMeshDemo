@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WSTGroupDeviceHeadView" id="U6b-Vx-4bR" customClass="WSTGroupDeviceHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVP-wl-OJS">
+                    <rect key="frame" x="12" y="16" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-MB-Hyq">
+                    <rect key="frame" x="257" y="13" width="24" height="24"/>
+                    <state key="normal" image="divice_icon_delete"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-XT-RDy">
+                    <rect key="frame" x="291" y="13" width="24" height="24"/>
+                    <state key="normal" image="divice_icon_add"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.071458406746387482" green="0.14420190453529358" blue="0.19830849766731262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="MTS-XT-RDy" secondAttribute="trailing" constant="5" id="3X9-QK-fKH"/>
+                <constraint firstItem="MTS-XT-RDy" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="fN9-I5-ce1"/>
+                <constraint firstItem="Mj6-MB-Hyq" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="gGF-an-Whb"/>
+                <constraint firstItem="iVP-wl-OJS" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" constant="12" id="rIT-l2-fUd"/>
+                <constraint firstItem="MTS-XT-RDy" firstAttribute="leading" secondItem="Mj6-MB-Hyq" secondAttribute="trailing" constant="10" id="trO-p5-GmZ"/>
+                <constraint firstItem="iVP-wl-OJS" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="vx7-OJ-weQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="addButton" destination="Mj6-MB-Hyq" id="vff-a9-2EG"/>
+                <outlet property="deleteButton" destination="MTS-XT-RDy" id="Qur-K6-vxn"/>
+                <outlet property="headLabel" destination="iVP-wl-OJS" id="fAc-Gy-ZEQ"/>
+            </connections>
+            <point key="canvasLocation" x="552" y="-74"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="divice_icon_add" width="24" height="24"/>
+        <image name="divice_icon_delete" width="24" height="24"/>
+    </resources>
+</document>

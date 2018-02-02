@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "昼节律"; ObjectID = "1hd-PW-Tro"; */
+"1hd-PW-Tro.text" = "昼节律";
+
+/* Class = "UILabel"; text = "08:00AM"; ObjectID = "9eF-fa-g4m"; */
+"9eF-fa-g4m.text" = "08:00AM";
+
+/* Class = "UILabel"; text = "持续5分钟"; ObjectID = "Lid-sy-VVN"; */
+"Lid-sy-VVN.text" = "持续5分钟";
+
+/* Class = "UILabel"; text = "持续5分钟"; ObjectID = "MaF-SW-9NB"; */
+"MaF-SW-9NB.text" = "持续5分钟";
+
+/* Class = "UILabel"; text = "夜节律"; ObjectID = "WfX-CR-WeX"; */
+"WfX-CR-WeX.text" = "夜节律";
+
+/* Class = "UILabel"; text = "08:00AM"; ObjectID = "bFs-QA-cVK"; */
+"bFs-QA-cVK.text" = "08:00AM";

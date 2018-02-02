@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WSTGroupDeviceCell" id="dPi-nZ-zHD" customClass="WSTGroupDeviceCell">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_bg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfD-O8-cwA">
+                        <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A型球泡灯_on" translatesAutoresizingMaskIntoConstraints="NO" id="SMd-IF-huj">
+                        <rect key="frame" x="36" y="39" width="72" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SMd-IF-huj" secondAttribute="height" multiplier="1:1" id="mEQ-Rt-0Mc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球泡灯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-cP-r20">
+                        <rect key="frame" x="0.0" y="116" width="144" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_mask" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-Zu-P9u">
+                        <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nfE-Zu-P9u" secondAttribute="bottom" id="9oz-a3-HRh"/>
+                <constraint firstAttribute="trailing" secondItem="S0Q-cP-r20" secondAttribute="trailing" id="9tM-bA-fW9"/>
+                <constraint firstItem="SMd-IF-huj" firstAttribute="width" secondItem="dPi-nZ-zHD" secondAttribute="width" multiplier="1:2" id="A1k-Vu-T4g"/>
+                <constraint firstItem="nfE-Zu-P9u" firstAttribute="top" secondItem="dPi-nZ-zHD" secondAttribute="top" id="Hga-QT-mHZ"/>
+                <constraint firstItem="S0Q-cP-r20" firstAttribute="top" secondItem="SMd-IF-huj" secondAttribute="bottom" constant="5" id="Nob-kF-hl4"/>
+                <constraint firstItem="SMd-IF-huj" firstAttribute="centerX" secondItem="dPi-nZ-zHD" secondAttribute="centerX" id="TKh-gR-tGG"/>
+                <constraint firstItem="S0Q-cP-r20" firstAttribute="centerX" secondItem="dPi-nZ-zHD" secondAttribute="centerX" id="U7P-Wb-H4q"/>
+                <constraint firstItem="S0Q-cP-r20" firstAttribute="leading" secondItem="dPi-nZ-zHD" secondAttribute="leading" id="UIi-EU-Xud"/>
+                <constraint firstItem="lfD-O8-cwA" firstAttribute="leading" secondItem="dPi-nZ-zHD" secondAttribute="leading" id="V6I-5j-TzH"/>
+                <constraint firstItem="lfD-O8-cwA" firstAttribute="top" secondItem="dPi-nZ-zHD" secondAttribute="top" id="bnX-lw-5iS"/>
+                <constraint firstItem="nfE-Zu-P9u" firstAttribute="leading" secondItem="dPi-nZ-zHD" secondAttribute="leading" id="d7m-WT-JPw"/>
+                <constraint firstAttribute="trailing" secondItem="lfD-O8-cwA" secondAttribute="trailing" id="lwk-3y-iT0"/>
+                <constraint firstAttribute="trailing" secondItem="nfE-Zu-P9u" secondAttribute="trailing" id="rrk-J6-RS6"/>
+                <constraint firstItem="SMd-IF-huj" firstAttribute="centerY" secondItem="dPi-nZ-zHD" secondAttribute="centerY" constant="-10" id="teQ-KC-3lE"/>
+                <constraint firstAttribute="bottom" secondItem="lfD-O8-cwA" secondAttribute="bottom" id="x9g-GG-Wr7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0Pi-YU-9RD"/>
+            <size key="customSize" width="144" height="170"/>
+            <connections>
+                <outlet property="deviceImageView" destination="SMd-IF-huj" id="lwt-f3-BXN"/>
+                <outlet property="maskImageView" destination="nfE-Zu-P9u" id="ggK-gP-rjv"/>
+                <outlet property="nameLabel" destination="S0Q-cP-r20" id="cQl-sP-3Wj"/>
+            </connections>
+            <point key="canvasLocation" x="-292" y="-131"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="A型球泡灯_on" width="53" height="53"/>
+        <image name="cell_bg" width="115" height="115"/>
+        <image name="delete_mask" width="86" height="86"/>
+    </resources>
+</document>

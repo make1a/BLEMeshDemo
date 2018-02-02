@@ -1,0 +1,88 @@
+//
+//  PrefixHeader.pch
+//  MeshLamp
+//
+//  Created by 微智电子 on 2017/9/29.
+//  Copyright © 2017年 make. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+//项目头文件
+#import "SVProgressHUD.h"
+#import "WZBlueToothManager.h"
+#import "WZBlueToothDataManager.h"
+#import "WZBLEDataModel.h"
+#import "Masonry.h"
+#import "FFDataBaseModel.h"
+#import "UIView+Animation.h"
+#import "AppDelegate.h"
+#import "WZConstantClass.h"
+#import "WZScanDeviceModel.h"
+#import "YYModel.h"
+#import "WZBLEDataAnalysisTool.h"
+#import "NSTimer+MKTimer.h"
+#import "NSString+MKEString.h"
+#import "RTRootNavigationController.h"
+#import "UIViewController+RTRootNavigationController.h"
+#import "FFDBSafeOperation.h"
+#import <TuyaSmartKit/TuyaSmartKit.h>
+#import "WSTColorModel.h"
+
+#define isIphoneX  ((SCREEN_HEIGHT == 812)?YES:NO)
+#define BGColor [UIColor colorWithRed:21/255.0 green:37/255.0 blue:52/255.0 alpha:1.0]
+
+#define IS_iPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define px750Width(a) a/750.f*SCREEN_WIDTH
+#define px1334Hight(a) a/1334.f*SCREEN_HEIGHT
+
+#define IS_iPhone5 (([[UIScreen mainScreen] bounds].size.height == 568) ? YES : NO)
+
+#define Sp2Pt(a) ((a) * [AppDelegate instance].scale)
+#define Pt2Sp(a) ((a) / [AppDelegate instance].scale)
+#define Width(a) (a).frame.size.width
+#define Height(a) (a).frame.size.height
+#define HGS(a) (a) * ([[UIScreen mainScreen] bounds].size.width / 320) //基于4英寸
+#define VGS(a) (a) * ([[UIScreen mainScreen] bounds].size.height / 568)
+
+#define LCSTR(str) NSLocalizedString(@(str), nil)
+#define LCCSTR(cstr) NSLocalizedString([NSString stringWithUTF8String:(cstr)], nil)
+
+#define  currentLanguage [NSString stringWithFormat:@"%@",[NSUserDefaults standarUserDefaults] objectForKey:@"appLanguage"]]
+
+#define LanguagePath [[NSBundle mainBundle] pathForResource:currentLanguage ofType:@"lproj"]
+
+#define Localized(key)[[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:nil table:nil]
+
+
+#define MLSelectColor           [UIColor colorWithRed:245.0/255.0 green:206.0/255.0 blue:111.0/255.0 alpha:1.0f]
+
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif  
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//获取当前语言
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+
+#endif /* __OBJC__ */
+#endif /* PrefixHeader_pch */

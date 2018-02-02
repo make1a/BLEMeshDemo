@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WSTHomeDeviceCell" id="SNj-6P-CL0" customClass="WSTHomeDeviceCell">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_bg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-aw-885">
+                        <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A型球泡灯_on" translatesAutoresizingMaskIntoConstraints="NO" id="37X-96-BUV">
+                        <rect key="frame" x="36" y="39" width="72" height="72"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="37X-96-BUV" secondAttribute="height" multiplier="1:1" id="AEq-q2-KdF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="球泡灯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-KX-AKk">
+                        <rect key="frame" x="0.0" y="116" width="144" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="m5f-KX-AKk" firstAttribute="top" secondItem="37X-96-BUV" secondAttribute="bottom" constant="5" id="Kmb-9d-dLy"/>
+                <constraint firstItem="37X-96-BUV" firstAttribute="centerY" secondItem="SNj-6P-CL0" secondAttribute="centerY" constant="-10" id="Nn3-SE-AAb"/>
+                <constraint firstItem="37X-96-BUV" firstAttribute="centerX" secondItem="SNj-6P-CL0" secondAttribute="centerX" id="PEK-Z4-4nX"/>
+                <constraint firstAttribute="bottom" secondItem="ljj-aw-885" secondAttribute="bottom" id="XtX-h5-xbr"/>
+                <constraint firstAttribute="trailing" secondItem="m5f-KX-AKk" secondAttribute="trailing" id="eyP-eS-EcL"/>
+                <constraint firstItem="ljj-aw-885" firstAttribute="leading" secondItem="SNj-6P-CL0" secondAttribute="leading" id="kod-j3-sHG"/>
+                <constraint firstAttribute="trailing" secondItem="ljj-aw-885" secondAttribute="trailing" id="q4T-lu-FnM"/>
+                <constraint firstItem="ljj-aw-885" firstAttribute="top" secondItem="SNj-6P-CL0" secondAttribute="top" id="qSI-qv-YuN"/>
+                <constraint firstItem="37X-96-BUV" firstAttribute="width" secondItem="ljj-aw-885" secondAttribute="width" multiplier="1:2" id="rhL-38-szi"/>
+                <constraint firstItem="m5f-KX-AKk" firstAttribute="centerX" secondItem="SNj-6P-CL0" secondAttribute="centerX" id="sCd-Fj-8Fr"/>
+                <constraint firstItem="m5f-KX-AKk" firstAttribute="leading" secondItem="SNj-6P-CL0" secondAttribute="leading" id="tMq-cl-hM9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Gsg-uF-zYw"/>
+            <size key="customSize" width="144" height="170"/>
+            <connections>
+                <outlet property="deviceImageView" destination="37X-96-BUV" id="Dkt-cD-ek7"/>
+                <outlet property="deviceNameLabel" destination="m5f-KX-AKk" id="fiz-C5-3F0"/>
+            </connections>
+            <point key="canvasLocation" x="-140" y="-107"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="A型球泡灯_on" width="53" height="53"/>
+        <image name="cell_bg" width="115" height="115"/>
+    </resources>
+</document>

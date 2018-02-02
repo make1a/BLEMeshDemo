@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSTZhouYJLViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="ySwitch" destination="xWi-pa-0aF" id="fGQ-It-ZH2"/>
+                <outlet property="ydurationLabel" destination="Lid-sy-VVN" id="zf0-BZ-kyX"/>
+                <outlet property="ytimeLabel" destination="9eF-fa-g4m" id="Kpl-fi-juD"/>
+                <outlet property="zSwitch" destination="zyS-wq-0xp" id="dkC-eY-YQA"/>
+                <outlet property="zdurationLabel" destination="MaF-SW-9NB" id="rpo-f9-eao"/>
+                <outlet property="ztimeLabel" destination="bFs-QA-cVK" id="uU9-8J-EoB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPG-m3-oKK" customClass="UIControl">
+                    <rect key="frame" x="20" y="40" width="335" height="111"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg_diurnalRhythm" translatesAutoresizingMaskIntoConstraints="NO" id="ITq-Pb-kP5">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="111"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFs-QA-cVK">
+                            <rect key="frame" x="30" y="67.5" width="68" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昼节律" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hd-PW-Tro">
+                            <rect key="frame" x="30" y="29" width="85.5" height="33.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyS-wq-0xp">
+                            <rect key="frame" x="266" y="30.5" width="51" height="31"/>
+                            <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="thumbTintColor" red="0.4543212056" green="0.8234148026" blue="0.9790186286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="zOnOff:" destination="-1" eventType="valueChanged" id="su9-rt-W5f"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="持续5分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaF-SW-9NB">
+                            <rect key="frame" x="108" y="67.5" width="75" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zyS-wq-0xp" secondAttribute="trailing" constant="20" id="C1h-ui-tso"/>
+                        <constraint firstAttribute="bottom" secondItem="ITq-Pb-kP5" secondAttribute="bottom" id="Dxp-Gb-gi7"/>
+                        <constraint firstItem="bFs-QA-cVK" firstAttribute="top" secondItem="1hd-PW-Tro" secondAttribute="bottom" constant="5" id="HNx-M3-ab7"/>
+                        <constraint firstItem="MaF-SW-9NB" firstAttribute="leading" secondItem="bFs-QA-cVK" secondAttribute="trailing" constant="10" id="MCk-Zu-kKt"/>
+                        <constraint firstAttribute="trailing" secondItem="ITq-Pb-kP5" secondAttribute="trailing" id="MjT-lE-y7H"/>
+                        <constraint firstItem="ITq-Pb-kP5" firstAttribute="top" secondItem="CPG-m3-oKK" secondAttribute="top" id="Odi-7o-Lxg"/>
+                        <constraint firstItem="1hd-PW-Tro" firstAttribute="centerY" secondItem="CPG-m3-oKK" secondAttribute="centerY" constant="-10" id="TEJ-w3-Arv"/>
+                        <constraint firstItem="1hd-PW-Tro" firstAttribute="leading" secondItem="CPG-m3-oKK" secondAttribute="leading" constant="30" id="V4H-i7-gBC"/>
+                        <constraint firstItem="bFs-QA-cVK" firstAttribute="leading" secondItem="1hd-PW-Tro" secondAttribute="leading" id="X8Z-mn-Dnl"/>
+                        <constraint firstItem="zyS-wq-0xp" firstAttribute="centerY" secondItem="1hd-PW-Tro" secondAttribute="centerY" id="fxy-5V-gGR"/>
+                        <constraint firstItem="ITq-Pb-kP5" firstAttribute="leading" secondItem="CPG-m3-oKK" secondAttribute="leading" id="jJ3-J8-enR"/>
+                        <constraint firstItem="MaF-SW-9NB" firstAttribute="centerY" secondItem="bFs-QA-cVK" secondAttribute="centerY" id="xjl-76-fVk"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickZhouJL:" destination="-1" eventType="touchUpInside" id="htV-bc-C9z"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-qp-NS2" customClass="UIControl">
+                    <rect key="frame" x="20" y="167" width="335" height="111"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg_night" translatesAutoresizingMaskIntoConstraints="NO" id="kFU-Xx-8Ha">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="111"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eF-fa-g4m">
+                            <rect key="frame" x="30" y="67.5" width="68" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夜节律" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfX-CR-WeX">
+                            <rect key="frame" x="30" y="29" width="86" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWi-pa-0aF">
+                            <rect key="frame" x="266" y="30.5" width="51" height="31"/>
+                            <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="thumbTintColor" red="0.32234638929367065" green="0.4118836522102356" blue="0.50738233327865601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="yOnOff:" destination="-1" eventType="valueChanged" id="USN-sg-CbT"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="持续5分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-sy-VVN">
+                            <rect key="frame" x="108" y="67.5" width="75" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kFU-Xx-8Ha" firstAttribute="top" secondItem="hV8-qp-NS2" secondAttribute="top" id="7eO-Oa-Nvt"/>
+                        <constraint firstItem="Lid-sy-VVN" firstAttribute="centerY" secondItem="9eF-fa-g4m" secondAttribute="centerY" id="Bcz-D9-J7g"/>
+                        <constraint firstItem="WfX-CR-WeX" firstAttribute="centerY" secondItem="hV8-qp-NS2" secondAttribute="centerY" constant="-10" id="C8I-Xq-1f2"/>
+                        <constraint firstItem="Lid-sy-VVN" firstAttribute="leading" secondItem="9eF-fa-g4m" secondAttribute="trailing" constant="10" id="CT9-85-NKX"/>
+                        <constraint firstItem="WfX-CR-WeX" firstAttribute="leading" secondItem="hV8-qp-NS2" secondAttribute="leading" constant="30" id="I6R-fr-5ua"/>
+                        <constraint firstAttribute="trailing" secondItem="kFU-Xx-8Ha" secondAttribute="trailing" id="X5F-9d-162"/>
+                        <constraint firstAttribute="trailing" secondItem="xWi-pa-0aF" secondAttribute="trailing" constant="20" id="a1m-zg-j5J"/>
+                        <constraint firstItem="xWi-pa-0aF" firstAttribute="centerY" secondItem="WfX-CR-WeX" secondAttribute="centerY" id="e2v-3h-CnL"/>
+                        <constraint firstItem="9eF-fa-g4m" firstAttribute="top" secondItem="WfX-CR-WeX" secondAttribute="bottom" constant="5" id="fme-SC-szT"/>
+                        <constraint firstItem="kFU-Xx-8Ha" firstAttribute="leading" secondItem="hV8-qp-NS2" secondAttribute="leading" id="nYn-vL-Go9"/>
+                        <constraint firstAttribute="bottom" secondItem="kFU-Xx-8Ha" secondAttribute="bottom" id="wp1-m9-4Cu"/>
+                        <constraint firstItem="9eF-fa-g4m" firstAttribute="leading" secondItem="WfX-CR-WeX" secondAttribute="leading" id="zcV-1K-JZM"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickYeJL:" destination="-1" eventType="touchUpInside" id="vpa-PO-DnX"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.081231676042079926" green="0.14516934752464294" blue="0.20317447185516357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hV8-qp-NS2" firstAttribute="leading" secondItem="CPG-m3-oKK" secondAttribute="leading" id="3Mo-LR-sja"/>
+                <constraint firstItem="hV8-qp-NS2" firstAttribute="trailing" secondItem="CPG-m3-oKK" secondAttribute="trailing" id="9yP-d5-jSX"/>
+                <constraint firstItem="hV8-qp-NS2" firstAttribute="width" secondItem="CPG-m3-oKK" secondAttribute="width" id="DOD-xH-SOv"/>
+                <constraint firstItem="CPG-m3-oKK" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="PdK-YG-IP6"/>
+                <constraint firstItem="hV8-qp-NS2" firstAttribute="height" secondItem="CPG-m3-oKK" secondAttribute="height" id="Sd4-U1-NH2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CPG-m3-oKK" secondAttribute="trailing" constant="20" id="YFL-jx-dIx"/>
+                <constraint firstItem="CPG-m3-oKK" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="fKS-56-8fU"/>
+                <constraint firstItem="CPG-m3-oKK" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:6" id="nFN-Ka-dj0"/>
+                <constraint firstItem="hV8-qp-NS2" firstAttribute="top" secondItem="CPG-m3-oKK" secondAttribute="bottom" constant="16" id="qda-bs-uIh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-128" y="55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_bg_diurnalRhythm" width="342" height="107"/>
+        <image name="img_bg_night" width="342" height="107"/>
+    </resources>
+</document>
